@@ -70,14 +70,14 @@ Be aware that in the second case you would need to configure your build process 
 
 To run clustered vert.x applications (with Hazelcast), you would need:
 
-1. some dependencies in your build descriptor to use the Hazelcast-Kubernates discovery
+1. some dependencies in your build descriptor to use the Hazelcast Kubernetes discovery
 2. a specific service for the event bus
 3. a specific cluster configuration
 4. set `APP_OPTIONS` to use this specific cluster configuration
 
-=== 1) Using Hazelcast kubernates discovery
+=== 1) Using Hazelcast Kubernetes discovery
 
-Hazelcast 3.6+ propose a SPI to extend / customize the cluster member discovery. They provide a discovery extension for Kubernates. To use it, you need to add the related artifact in your build descriptor. For Maven, do it as follows:
+Hazelcast 3.6+ propose a SPI to extend / customize the cluster member discovery. They provide a discovery extension for Kubernetes. To use it, you need to add the related artifact in your build descriptor. For Maven, do it as follows:
 
 [source, xml]
 ----
@@ -99,7 +99,7 @@ Hazelcast 3.6+ propose a SPI to extend / customize the cluster member discovery.
 
 You should update the version numbers to _latest_.
 
-When the application is packaged (as a fat jar), it embeds the kubernates discovery.
+When the application is packaged (as a fat jar), it embeds the kubernetes discovery.
 
 === 2) The vertx-eventbus service
 
